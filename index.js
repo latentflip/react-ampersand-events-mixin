@@ -1,6 +1,6 @@
 var Events = require('ampersand-events');
-var merge = require('react/lib/merge');
-var isEqual = require('react/lib/shallowEqual');
+var assign = require('lodash.assign');
+var isEqual = require('lodash.isequal');
 var isFunction = require('lodash.isfunction');
 
 
