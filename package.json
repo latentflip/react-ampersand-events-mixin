@@ -1,15 +1,15 @@
 {
-  "name": "react-backbone-events-mixin",
+  "name": "react-ampersand-events-mixin",
   "version": "0.1.1",
-  "description": "Mixing in Backbone.Events with React components",
+  "description": "Mixing in ampersand-event with React components",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "JaapRood",
+  "author": "JaapRood, Philip Roberts",
   "license": "MIT",
   "dependencies": {
-    "backbone-events-standalone": "~0.2.2",
+    "ampersand-events": "~0.2.2",
     "react": "~0.11.1",
     "lodash.isfunction": "~2.4.1"
   }

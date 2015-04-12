@@ -1,28 +1,28 @@
-var Events = require('backbone-events-standalone'),
-	merge = require('react/lib/merge'),
-	isEqual = require('react/lib/shallowEqual'),
-	isFunction = require('lodash.isfunction');
+var Events = require('ampersand-events');
+var merge = require('react/lib/merge');
+var isEqual = require('react/lib/shallowEqual');
+var isFunction = require('lodash.isfunction');
 
 
 module.exports = merge(Events, {
-	// proxy method for this.registerListeners. register listeners to other event emitters
+    // proxy method for this.registerListeners. register listeners to other event emitters
 	_registerListeners: function(props, state) {
 		if (isFunction(this.registerListeners)) {
 			return this.registerListeners.apply(this, arguments);
 		}
 
-		return this; 
+		return this;
 
 	},
 
-	// proxy method for this.dereigsterListeners. deregister listeners to other event emitters, when non passed, stops listening to all
+	// proxy method for this.deregisterListeners. deregister listeners to other event emitters, when non passed, stops listening to all
 	_deregisterListeners: function(props, state) {
 		if (isFunction(this.deregisterListeners)) {
 			return this.deregisterListeners.apply(this, arguments);
 		}
 
 		this.stopListening();
-		
+
 		return this;
 	},
 
@@ -39,7 +39,7 @@ module.exports = merge(Events, {
 
 	componentWillReceiveProps: function(newProps) {
 		var oldProps = this.props,
-			state = this.state;
+		var state = this.state;
 		if (isEqual(oldProps, newProps)) return;
 
 		this._deregisterListeners(oldProps, state);
