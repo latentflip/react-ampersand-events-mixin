@@ -4,7 +4,7 @@ var isEqual = require('lodash.isequal');
 var isFunction = require('lodash.isfunction');
 
 
-module.exports = merge(Events, {
+module.exports = assign(Events, {
     // proxy method for this.registerListeners. register listeners to other event emitters
 	_registerListeners: function(props, state) {
 		if (isFunction(this.registerListeners)) {
