@@ -9,8 +9,8 @@
   "author": "JaapRood, Philip Roberts",
   "license": "MIT",
   "dependencies": {
-    "ampersand-events": "~0.2.2",
-    "react": "~0.11.1",
+    "ampersand-events": "^1.1.0",
+    "react": "~0.13.0",
     "lodash.isfunction": "~2.4.1"
   }
 }
