@@ -38,7 +38,7 @@ module.exports = merge(Events, {
 	},
 
 	componentWillReceiveProps: function(newProps) {
-		var oldProps = this.props,
+		var oldProps = this.props;
 		var state = this.state;
 		if (isEqual(oldProps, newProps)) return;
 
